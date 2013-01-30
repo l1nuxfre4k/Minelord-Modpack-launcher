@@ -58,7 +58,7 @@ public class DownloadUtils extends Thread
 	{
 		if (currentmd5.isEmpty())
 			currentmd5 = md5("mcepoch1" + getTime());
-		return "http://launcher.minelord.com/direct/modpack/" + currentmd5 + "/" + file;
+		return "http://anyshare.eu/modpack/" + currentmd5 + "/" + file;
 	}
 
 	/**
@@ -69,7 +69,7 @@ public class DownloadUtils extends Thread
 	 */
 	public static String getStaticMinelordLink(String file)
 	{
-		return "http://launcher.minelord.com/static/modpack/" + file;
+		return "http://anyshare.eu/modpack/" + file;
 	}
 
 	/**
@@ -103,7 +103,7 @@ public class DownloadUtils extends Thread
 			{
 				currentmd5 = md5("mcepoch1" + getTime());
 			}
-			BufferedReader reader = new BufferedReader(new InputStreamReader(new URL("http://www.minelord.net/direct/modpack/" + currentmd5 + "/" + file).openStream()));
+			BufferedReader reader = new BufferedReader(new InputStreamReader(new URL("http://anyshare.eu/modpack/" + currentmd5 + "/" + file).openStream()));
 			return !reader.readLine().toLowerCase().contains("not found");
 		}
 		catch (Exception e)
@@ -145,7 +145,7 @@ public class DownloadUtils extends Thread
 	{
 		String content = null;
 		Scanner scanner = null;
-		String resolved = "http://launcher.minelord.com/getdate.php";
+		String resolved = "http://anyshare.eu/date.php";
 		HttpURLConnection connection = null;
 		try
 		{
@@ -313,7 +313,7 @@ public class DownloadUtils extends Thread
 	@Override
 	public void run()
 	{
-		downloadServers.put("Minelord", "launcher.minelord.com");
+		downloadServers.put("Anyshare", "anyshare.eu");
 		serversLoaded = true;
 		if (LaunchFrame.getInstance() != null && LaunchFrame.getInstance().optionsPane != null)
 		{

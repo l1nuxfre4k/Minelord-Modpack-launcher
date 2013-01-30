@@ -365,7 +365,7 @@ public class LaunchFrame extends JFrame
 					Desktop desktop = Desktop.getDesktop();
 					try
 					{
-						desktop.browse(new URI("http://minelord.com/donate"));
+						desktop.browse(new URI("http://keeponmining.se/donate"));
 					}
 					catch (Exception exc)
 					{
